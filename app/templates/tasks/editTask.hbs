@@ -1,0 +1,23 @@
+<form>
+    <div class="form-group">
+        <label>Title</label>
+        {{input type="text" class="form-control" value = model.title.placeholder="Task Name"}}
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        {{input type="text" class="form-control" value = model.description.placeholder="Description"}}
+    </div>
+    <div class="form-group">
+        <label>Date</label>
+        {{input type="text" class="form-control" value = model.date}}
+    </div>
+    <div class="form-group">
+        <label>Title</label>
+        {{select value=model.status class="form-control"}}
+        <option value="new">New</option>
+        <option value="notStarted">Not Started</option>
+        <option value="started">Started</option>
+        <option value="notCompleted">Not Completed</option>
+        <option value="completed">Completed</option>
+    </div>
+</form>
