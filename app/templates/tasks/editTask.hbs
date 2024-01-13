@@ -1,0 +1,23 @@
+<form>
+    <div class="form-group">
+        <label>Title</label>
+        {{input type="text" class="form-control" value = model.title.placeholder="Task Name"}}
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        {{input type="text" class="form-control" value = model.description.placeholder="Description"}}
+    </div>
+    <div class="form-group">
+        <label>Date</label>
+        {{input type="text" class="form-control" value = model.date}}
+    </div>
+    <div class="form-group">
+        <label>Title</label>
+        <select class="form-control" value = model.status>
+            {{#each statusOptions as |status|}}
+                <option value={{status}}>{{status}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <button {{action 'editTask' model.id}} class="btn btn-primary">Add Task</button>
+</form>
