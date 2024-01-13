@@ -1,6 +1,8 @@
 import Ember from "ember";
 
 export default Ember.Controller.extend({
+  statusOption: ["Pending", "Started", "In Progress", "Completed"];
+  
   actions: {
     addTask: function () {
       var title = this.title;
