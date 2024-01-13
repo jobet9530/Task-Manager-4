@@ -13,11 +13,11 @@
     </div>
     <div class="form-group">
         <label>Title</label>
-        {{select value=model.status class="form-control"}}
-        <option value="new">New</option>
-        <option value="notStarted">Not Started</option>
-        <option value="started">Started</option>
-        <option value="notCompleted">Not Completed</option>
-        <option value="completed">Completed</option>
+        <select class="form-control" value = model.status>
+            {{#each statusOptions as |status|}}
+                <option value={{status}}>{{status}}</option>
+            {{/each}}
+        </select>
     </div>
+    <button {{action 'editTask' model.id}} class="btn btn-primary">Add Task</button>
 </form>
